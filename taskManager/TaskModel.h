@@ -20,6 +20,10 @@
 
 @property (nonatomic,strong) PFFile *TM_image;
 
-+(void)saveTaskWithName:(NSString *)name withDescription:(NSString *)description withDueDate:(NSDate *)dueDate;
+@property (nonatomic,strong) id DataModel;
+
+- (void)initWithName:(NSString *)name withDescription:(NSString *)description withDueDate:(NSDate *)dueDate withObjectID:(NSString *)objectID;
+
++ (void)saveTaskWithName:(NSString *)name withDescription:(NSString *)description withDueDate:(NSDate *)dueDate;
 
 @end
