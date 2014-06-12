@@ -14,13 +14,34 @@
 		EB15AA57194821EC00A73ACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB15AA56194821EC00A73ACF /* main.m */; };
 		EB15AA5B194821EC00A73ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB15AA5A194821EC00A73ACF /* AppDelegate.m */; };
 		EB15AA5E194821EC00A73ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB15AA5C194821EC00A73ACF /* Main.storyboard */; };
-		EB15AA61194821EC00A73ACF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB15AA60194821EC00A73ACF /* ViewController.m */; };
 		EB15AA63194821EC00A73ACF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB15AA62194821EC00A73ACF /* Images.xcassets */; };
 		EB15AA6A194821EC00A73ACF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA69194821EC00A73ACF /* XCTest.framework */; };
 		EB15AA6B194821EC00A73ACF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA4A194821EC00A73ACF /* Foundation.framework */; };
 		EB15AA6C194821EC00A73ACF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA4E194821EC00A73ACF /* UIKit.framework */; };
 		EB15AA74194821EC00A73ACF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB15AA72194821EC00A73ACF /* InfoPlist.strings */; };
 		EB15AA76194821EC00A73ACF /* taskManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB15AA75194821EC00A73ACF /* taskManagerTests.m */; };
+		EB15AA801948233D00A73ACF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA7F1948233D00A73ACF /* Parse.framework */; };
+		EB15AA82194823A800A73ACF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA81194823A800A73ACF /* AudioToolbox.framework */; };
+		EB15AA84194823B400A73ACF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA83194823B400A73ACF /* CFNetwork.framework */; };
+		EB15AA861948257E00A73ACF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA851948257E00A73ACF /* CoreLocation.framework */; };
+		EB15AA88194825A600A73ACF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA87194825A600A73ACF /* libz.dylib */; };
+		EB15AA8A194825BB00A73ACF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA89194825BB00A73ACF /* MobileCoreServices.framework */; };
+		EB15AA8C194825E000A73ACF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA8B194825E000A73ACF /* QuartzCore.framework */; };
+		EB15AA8E194825F100A73ACF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA8D194825F100A73ACF /* Security.framework */; };
+		EB15AA901948260400A73ACF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA8F1948260400A73ACF /* SystemConfiguration.framework */; };
+		EB15AA921948262200A73ACF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA911948262200A73ACF /* StoreKit.framework */; };
+		EB15AA961948D0A400A73ACF /* TaskMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB15AA951948D0A400A73ACF /* TaskMainVC.m */; };
+		EB2E6050194960C400E5DC13 /* CreateTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2E604F194960C400E5DC13 /* CreateTaskVC.m */; };
+		EB2E6054194960FC00E5DC13 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2E6053194960FC00E5DC13 /* TaskModel.m */; };
+		EB2E60581949640900E5DC13 /* EditTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2E60571949640900E5DC13 /* EditTaskVC.m */; };
+		EB2E60651949792600E5DC13 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E605D1949792600E5DC13 /* bookmark.png */; };
+		EB2E60661949792600E5DC13 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E605E1949792600E5DC13 /* calendar.png */; };
+		EB2E60671949792600E5DC13 /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E605F1949792600E5DC13 /* comments.png */; };
+		EB2E60681949792600E5DC13 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E60601949792600E5DC13 /* map.png */; };
+		EB2E60691949792600E5DC13 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E60611949792600E5DC13 /* news.png */; };
+		EB2E606A1949792600E5DC13 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E60621949792600E5DC13 /* photo.png */; };
+		EB2E606B1949792600E5DC13 /* tag.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E60631949792600E5DC13 /* tag.png */; };
+		EB2E606C1949792600E5DC13 /* wishlist.png in Resources */ = {isa = PBXBuildFile; fileRef = EB2E60641949792600E5DC13 /* wishlist.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +66,38 @@
 		EB15AA59194821EC00A73ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB15AA5A194821EC00A73ACF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB15AA5D194821EC00A73ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EB15AA5F194821EC00A73ACF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EB15AA60194821EC00A73ACF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EB15AA62194821EC00A73ACF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB15AA68194821EC00A73ACF /* taskManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taskManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB15AA69194821EC00A73ACF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EB15AA71194821EC00A73ACF /* taskManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "taskManagerTests-Info.plist"; sourceTree = "<group>"; };
 		EB15AA73194821EC00A73ACF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB15AA75194821EC00A73ACF /* taskManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = taskManagerTests.m; sourceTree = "<group>"; };
+		EB15AA7F1948233D00A73ACF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = taskManager/Parse.framework; sourceTree = "<group>"; };
+		EB15AA81194823A800A73ACF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EB15AA83194823B400A73ACF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EB15AA851948257E00A73ACF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EB15AA87194825A600A73ACF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EB15AA89194825BB00A73ACF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EB15AA8B194825E000A73ACF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EB15AA8D194825F100A73ACF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EB15AA8F1948260400A73ACF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EB15AA911948262200A73ACF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EB15AA941948D0A400A73ACF /* TaskMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskMainVC.h; sourceTree = "<group>"; };
+		EB15AA951948D0A400A73ACF /* TaskMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskMainVC.m; sourceTree = "<group>"; };
+		EB2E604E194960C400E5DC13 /* CreateTaskVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTaskVC.h; sourceTree = "<group>"; };
+		EB2E604F194960C400E5DC13 /* CreateTaskVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTaskVC.m; sourceTree = "<group>"; };
+		EB2E6052194960FC00E5DC13 /* TaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskModel.h; sourceTree = "<group>"; };
+		EB2E6053194960FC00E5DC13 /* TaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskModel.m; sourceTree = "<group>"; };
+		EB2E60561949640900E5DC13 /* EditTaskVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTaskVC.h; sourceTree = "<group>"; };
+		EB2E60571949640900E5DC13 /* EditTaskVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTaskVC.m; sourceTree = "<group>"; };
+		EB2E605D1949792600E5DC13 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
+		EB2E605E1949792600E5DC13 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		EB2E605F1949792600E5DC13 /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments.png; sourceTree = "<group>"; };
+		EB2E60601949792600E5DC13 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		EB2E60611949792600E5DC13 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
+		EB2E60621949792600E5DC13 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		EB2E60631949792600E5DC13 /* tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag.png; sourceTree = "<group>"; };
+		EB2E60641949792600E5DC13 /* wishlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wishlist.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +105,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB15AA921948262200A73ACF /* StoreKit.framework in Frameworks */,
+				EB15AA901948260400A73ACF /* SystemConfiguration.framework in Frameworks */,
+				EB15AA8E194825F100A73ACF /* Security.framework in Frameworks */,
+				EB15AA8C194825E000A73ACF /* QuartzCore.framework in Frameworks */,
+				EB15AA8A194825BB00A73ACF /* MobileCoreServices.framework in Frameworks */,
+				EB15AA88194825A600A73ACF /* libz.dylib in Frameworks */,
+				EB15AA861948257E00A73ACF /* CoreLocation.framework in Frameworks */,
 				EB15AA4D194821EC00A73ACF /* CoreGraphics.framework in Frameworks */,
+				EB15AA84194823B400A73ACF /* CFNetwork.framework in Frameworks */,
+				EB15AA82194823A800A73ACF /* AudioToolbox.framework in Frameworks */,
 				EB15AA4F194821EC00A73ACF /* UIKit.framework in Frameworks */,
+				EB15AA801948233D00A73ACF /* Parse.framework in Frameworks */,
 				EB15AA4B194821EC00A73ACF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +156,16 @@
 		EB15AA49194821EC00A73ACF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB15AA911948262200A73ACF /* StoreKit.framework */,
+				EB15AA8F1948260400A73ACF /* SystemConfiguration.framework */,
+				EB15AA8D194825F100A73ACF /* Security.framework */,
+				EB15AA8B194825E000A73ACF /* QuartzCore.framework */,
+				EB15AA89194825BB00A73ACF /* MobileCoreServices.framework */,
+				EB15AA87194825A600A73ACF /* libz.dylib */,
+				EB15AA851948257E00A73ACF /* CoreLocation.framework */,
+				EB15AA83194823B400A73ACF /* CFNetwork.framework */,
+				EB15AA81194823A800A73ACF /* AudioToolbox.framework */,
+				EB15AA7F1948233D00A73ACF /* Parse.framework */,
 				EB15AA4A194821EC00A73ACF /* Foundation.framework */,
 				EB15AA4C194821EC00A73ACF /* CoreGraphics.framework */,
 				EB15AA4E194821EC00A73ACF /* UIKit.framework */,
@@ -112,11 +177,13 @@
 		EB15AA50194821EC00A73ACF /* taskManager */ = {
 			isa = PBXGroup;
 			children = (
-				EB15AA59194821EC00A73ACF /* AppDelegate.h */,
-				EB15AA5A194821EC00A73ACF /* AppDelegate.m */,
+				EB2E605C1949792600E5DC13 /* Images */,
 				EB15AA5C194821EC00A73ACF /* Main.storyboard */,
-				EB15AA5F194821EC00A73ACF /* ViewController.h */,
-				EB15AA60194821EC00A73ACF /* ViewController.m */,
+				EB15AA931948D04A00A73ACF /* Delegate */,
+				EB2E6051194960E200E5DC13 /* TaskModel */,
+				EB2E6055194963EB00E5DC13 /* EditTask */,
+				EB15AA971948D87100A73ACF /* TaskMainVC */,
+				EB2E604D1949607C00E5DC13 /* CreateTaskVC */,
 				EB15AA62194821EC00A73ACF /* Images.xcassets */,
 				EB15AA51194821EC00A73ACF /* Supporting Files */,
 			);
@@ -150,6 +217,66 @@
 				EB15AA72194821EC00A73ACF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB15AA931948D04A00A73ACF /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EB15AA59194821EC00A73ACF /* AppDelegate.h */,
+				EB15AA5A194821EC00A73ACF /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		EB15AA971948D87100A73ACF /* TaskMainVC */ = {
+			isa = PBXGroup;
+			children = (
+				EB15AA941948D0A400A73ACF /* TaskMainVC.h */,
+				EB15AA951948D0A400A73ACF /* TaskMainVC.m */,
+			);
+			name = TaskMainVC;
+			sourceTree = "<group>";
+		};
+		EB2E604D1949607C00E5DC13 /* CreateTaskVC */ = {
+			isa = PBXGroup;
+			children = (
+				EB2E604E194960C400E5DC13 /* CreateTaskVC.h */,
+				EB2E604F194960C400E5DC13 /* CreateTaskVC.m */,
+			);
+			name = CreateTaskVC;
+			sourceTree = "<group>";
+		};
+		EB2E6051194960E200E5DC13 /* TaskModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB2E6052194960FC00E5DC13 /* TaskModel.h */,
+				EB2E6053194960FC00E5DC13 /* TaskModel.m */,
+			);
+			name = TaskModel;
+			sourceTree = "<group>";
+		};
+		EB2E6055194963EB00E5DC13 /* EditTask */ = {
+			isa = PBXGroup;
+			children = (
+				EB2E60561949640900E5DC13 /* EditTaskVC.h */,
+				EB2E60571949640900E5DC13 /* EditTaskVC.m */,
+			);
+			name = EditTask;
+			sourceTree = "<group>";
+		};
+		EB2E605C1949792600E5DC13 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EB2E605D1949792600E5DC13 /* bookmark.png */,
+				EB2E605E1949792600E5DC13 /* calendar.png */,
+				EB2E605F1949792600E5DC13 /* comments.png */,
+				EB2E60601949792600E5DC13 /* map.png */,
+				EB2E60611949792600E5DC13 /* news.png */,
+				EB2E60621949792600E5DC13 /* photo.png */,
+				EB2E60631949792600E5DC13 /* tag.png */,
+				EB2E60641949792600E5DC13 /* wishlist.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +355,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2E606B1949792600E5DC13 /* tag.png in Resources */,
+				EB2E606C1949792600E5DC13 /* wishlist.png in Resources */,
+				EB2E60691949792600E5DC13 /* news.png in Resources */,
 				EB15AA63194821EC00A73ACF /* Images.xcassets in Resources */,
+				EB2E60651949792600E5DC13 /* bookmark.png in Resources */,
+				EB2E60661949792600E5DC13 /* calendar.png in Resources */,
+				EB2E60671949792600E5DC13 /* comments.png in Resources */,
+				EB2E606A1949792600E5DC13 /* photo.png in Resources */,
+				EB2E60681949792600E5DC13 /* map.png in Resources */,
 				EB15AA55194821EC00A73ACF /* InfoPlist.strings in Resources */,
 				EB15AA5E194821EC00A73ACF /* Main.storyboard in Resources */,
 			);
@@ -249,7 +384,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB15AA61194821EC00A73ACF /* ViewController.m in Sources */,
+				EB15AA961948D0A400A73ACF /* TaskMainVC.m in Sources */,
+				EB2E6050194960C400E5DC13 /* CreateTaskVC.m in Sources */,
+				EB2E6054194960FC00E5DC13 /* TaskModel.m in Sources */,
+				EB2E60581949640900E5DC13 /* EditTaskVC.m in Sources */,
 				EB15AA5B194821EC00A73ACF /* AppDelegate.m in Sources */,
 				EB15AA57194821EC00A73ACF /* main.m in Sources */,
 			);
@@ -376,6 +514,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/taskManager",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "taskManager/taskManager-Prefix.pch";
 				INFOPLIST_FILE = "taskManager/taskManager-Info.plist";
@@ -389,6 +531,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/taskManager",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "taskManager/taskManager-Prefix.pch";
 				INFOPLIST_FILE = "taskManager/taskManager-Info.plist";
@@ -456,6 +602,7 @@
 				EB15AA7B194821EC00A73ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB15AA7C194821EC00A73ACF /* Build configuration list for PBXNativeTarget "taskManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +611,7 @@
 				EB15AA7E194821EC00A73ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
