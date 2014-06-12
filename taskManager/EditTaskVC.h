@@ -10,6 +10,6 @@
 #import "TaskModel.h"
 #import "RMDateSelectionViewController.h"
 
-@interface EditTaskVC : UIViewController<RMDateSelectionViewControllerDelegate>
+@interface EditTaskVC : UIViewController<RMDateSelectionViewControllerDelegate, UIActionSheetDelegate>
 @property (nonatomic,strong) TaskModel *dataModel;
 @end
