@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TaskModel.h"
+#import "RMDateSelectionViewController.h"
 
-@interface CreateTaskVC : UIViewController
+@interface CreateTaskVC : UIViewController<RMDateSelectionViewControllerDelegate>
 @end

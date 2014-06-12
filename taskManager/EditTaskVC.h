@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TaskModel.h"
+#import "RMDateSelectionViewController.h"
 
-@interface EditTaskVC : UIViewController
+@interface EditTaskVC : UIViewController<RMDateSelectionViewControllerDelegate>
 @property (nonatomic,strong) TaskModel *dataModel;
 @end

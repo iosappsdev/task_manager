@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2DD043194A1700005D5471 /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DD042194A1700005D5471 /* RMDateSelectionViewController.m */; };
 		EB15AA4B194821EC00A73ACF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA4A194821EC00A73ACF /* Foundation.framework */; };
 		EB15AA4D194821EC00A73ACF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA4C194821EC00A73ACF /* CoreGraphics.framework */; };
 		EB15AA4F194821EC00A73ACF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB15AA4E194821EC00A73ACF /* UIKit.framework */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C2DD041194A1700005D5471 /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDateSelectionViewController.h; sourceTree = "<group>"; };
+		8C2DD042194A1700005D5471 /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDateSelectionViewController.m; sourceTree = "<group>"; };
 		EB15AA47194821EC00A73ACF /* taskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB15AA4A194821EC00A73ACF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB15AA4C194821EC00A73ACF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C2DD03F194A16D8005D5471 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8C2DD040194A1700005D5471 /* RMDateSelectionViewController */,
+			);
+			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		8C2DD040194A1700005D5471 /* RMDateSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8C2DD041194A1700005D5471 /* RMDateSelectionViewController.h */,
+				8C2DD042194A1700005D5471 /* RMDateSelectionViewController.m */,
+			);
+			path = RMDateSelectionViewController;
+			sourceTree = "<group>";
+		};
+		8C2DD044194A18C2005D5471 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8C2DD03F194A16D8005D5471 /* Custom Classes */,
+				EB2E605C1949792600E5DC13 /* Images */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		EB15AA3E194821EC00A73ACF = {
 			isa = PBXGroup;
 			children = (
@@ -177,9 +206,9 @@
 		EB15AA50194821EC00A73ACF /* taskManager */ = {
 			isa = PBXGroup;
 			children = (
-				EB2E605C1949792600E5DC13 /* Images */,
 				EB15AA5C194821EC00A73ACF /* Main.storyboard */,
 				EB15AA931948D04A00A73ACF /* Delegate */,
+				8C2DD044194A18C2005D5471 /* Assets */,
 				EB2E6051194960E200E5DC13 /* TaskModel */,
 				EB15AA971948D87100A73ACF /* TaskMainVC */,
 				EB2E6055194963EB00E5DC13 /* EditTask */,
@@ -384,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2DD043194A1700005D5471 /* RMDateSelectionViewController.m in Sources */,
 				EB15AA961948D0A400A73ACF /* TaskMainVC.m in Sources */,
 				EB2E6050194960C400E5DC13 /* CreateTaskVC.m in Sources */,
 				EB2E6054194960FC00E5DC13 /* TaskModel.m in Sources */,

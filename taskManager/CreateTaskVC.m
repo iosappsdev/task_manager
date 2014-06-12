@@ -8,15 +8,16 @@
 
 #import "CreateTaskVC.h"
 
-@interface CreateTaskVC ()
+@interface CreateTaskVC () {
+    NSDate *localDueDate;
+}
 @property (strong, nonatomic) IBOutlet UITextField *tf_taskName;
 @property (strong, nonatomic) IBOutlet UITextField *tf_description;
-@property (strong, nonatomic) IBOutlet UIDatePicker *dp_dueDate;
 - (IBAction)saveTask:(id)sender;
 @end
 
 @implementation CreateTaskVC
-@synthesize tf_description,tf_taskName, dp_dueDate;
+@synthesize tf_description,tf_taskName;
 
 - (void)viewDidLoad
 {
@@ -27,10 +28,20 @@
     self.title = @"Create Task";
     
     // Clear Back Button Title
-    self.navigationController.navigationBar.topItem.title = @"";
+    // self.navigationController.navigationBar.topItem.title = @"";
 }
 
+// Delegate Methods
+- (void)dateSelectionViewController:(RMDateSelectionViewController *)vc didSelectDate:(NSDate *)aDate {
+    localDueDate = aDate;
+}
+
+- (void)dateSelectionViewControllerDidCancel:(RMDateSelectionViewController *)vc {
+    NSLog(@"User Cancelled Selection");
+}
+
+// IBActions
 - (IBAction)saveTask:(id)sender {
-    [TaskModel saveTaskWithName:tf_taskName.text withDescription:tf_description.text withDueDate:dp_dueDate.date];
+    [TaskModel saveTaskWithName:tf_taskName.text withDescription:tf_description.text withDueDate:localDueDate];
 }
 @end
