@@ -122,6 +122,7 @@
      dataModel.TM_name = [object objectForKey:@"name"];
      dataModel.TM_description = [object objectForKey:@"description"];
      dataModel.TM_dueDate = [object objectForKey:@"dueDate"];
+     
      NSLog(@"%@",dataModel.TM_dueDate);
      dataModel.TM_taskID = objectID;
      
