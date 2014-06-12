@@ -37,4 +37,12 @@
     NSLog(@"Edit Button Selected");
 }
 
+- (void)dateSelectionViewController:(RMDateSelectionViewController *)vc didSelectDate:(NSDate *)aDate {
+    
+}
+
+- (void)dateSelectionViewControllerDidCancel:(RMDateSelectionViewController *)vc {
+    
+}
+
 @end
