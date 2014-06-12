@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view.
 }
 
--(IBAction)saveTask:(id)sender {
+- (IBAction)saveTask:(id)sender {
     [TaskModel saveTaskWithName:tf_taskName.text withDescription:tf_description.text withDueDate:dp_dueDate.date];
 }
 
