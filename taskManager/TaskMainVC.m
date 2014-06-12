@@ -87,11 +87,11 @@
     }
     
     // Configure the cell
-    //PFFile *thumbnail = [object objectForKey:@"imageFile"];
-    //PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    //thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
-    //thumbnailImageView.file = thumbnail;
-    //[thumbnailImageView loadInBackground];
+    // PFFile *thumbnail = [object objectForKey:@"imageFile"];
+    // PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    // thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    // thumbnailImageView.file = thumbnail;
+    // [thumbnailImageView loadInBackground];
     
     cell.textLabel.text = [object objectForKey:@"name"];
     cell.imageView.image = [UIImage imageNamed:@"calendar.png"];
@@ -103,14 +103,13 @@
 {
     [super objectsDidLoad:error];
     
-    
+    objectCounter++;
     
     if (error) {
         NSLog(@"error: %@", [error localizedDescription]);
     } else {
-        NSLog(@"It's all good!");
+        NSLog(@"It's all good! %i Objects Loaded", objectCounter);
     }
-    
 }
 
 - (PFObject *)getObject {
@@ -119,8 +118,6 @@
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     // Create Object from Objects Array
     PFObject *object = [self.objects objectAtIndex:indexPath.row];
-    // Output Object ID
-    NSLog(@"Object ID: %@", [object objectId]);
     
     // Return Selected Object
     return object;
@@ -128,7 +125,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
  {
-
+     // Output Object ID
+     NSLog(@"You Selected Object ID: %@", [[self getObject] objectId]);
+     
+     // Load Model Data
      TaskModel *dataModel = [[TaskModel alloc]init];
      dataModel.TM_name = [[self getObject] objectForKey:@"name"];
      dataModel.TM_description = [[self getObject] objectForKey:@"description"];
