@@ -19,7 +19,7 @@
 @end
 
 @implementation CreateTaskVC
-@synthesize tf_description,tf_taskName;
+@synthesize tf_description,tf_taskName,lb_dueDate;
 
 - (void)viewDidLoad
 {
@@ -38,6 +38,8 @@
     localDueDate = aDate;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"MMM dd, yyyy"];
+    lb_dueDate.text = [formatter stringFromDate:localDueDate];
 }
 
 - (void)dateSelectionViewControllerDidCancel:(RMDateSelectionViewController *)vc {
