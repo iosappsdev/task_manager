@@ -10,7 +10,11 @@
 #import "CreateTaskVC.h"
 #import "EditTaskVC.h"
 
-@interface TaskMainVC ()
+@interface TaskMainVC () {
+    // Count Number of Objects Loaded
+    // **Testing ONLY**
+    int objectCounter;
+}
 - (IBAction)newTask:(id)sender;
 - (IBAction)options:(id)sender;
 @end
@@ -22,10 +26,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Set Title
     self.title = @"Task Manager";
+    
+    // Init Counter
+    objectCounter = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    // Reload Objects to Check For Changes
     [self loadObjects];
 }
 
@@ -48,7 +57,7 @@
         self.paginationEnabled = YES;
         
         // The number of objects to show per page
-        self.objectsPerPage = 10;
+        self.objectsPerPage = 20;
     }
     return self;
 }
@@ -59,11 +68,11 @@
     
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
-    /*    if ([self.objects count] == 0) {
+   if ([self.objects count] == 0) {
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-     }*/
+     }
     
-    //    [query orderByAscending:@"name"];
+    [query orderByAscending:@"createdAt"];
     
     return query;
 }
@@ -90,12 +99,50 @@
     return cell;
 }
 
-- (void) objectsDidLoad:(NSError *)error
+- (void)objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
     
-    //NSLog(@"error: %@", [error localizedDescription]);
+    
+    
+    if (error) {
+        NSLog(@"error: %@", [error localizedDescription]);
+    } else {
+        NSLog(@"It's all good!");
+    }
+    
 }
+
+- (PFObject *)getObject {
+    
+    // Get Selected Row
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    // Create Object from Objects Array
+    PFObject *object = [self.objects objectAtIndex:indexPath.row];
+    // Output Object ID
+    NSLog(@"Object ID: %@", [object objectId]);
+    
+    // Return Selected Object
+    return object;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+
+     TaskModel *dataModel = [[TaskModel alloc]init];
+     dataModel.TM_name = [[self getObject] objectForKey:@"name"];
+     dataModel.TM_description = [[self getObject] objectForKey:@"description"];
+     dataModel.TM_dueDate = [[self getObject] objectForKey:@"dueDate"];
+     dataModel.TM_taskID = [self getObject].objectId;
+     
+     static NSString *segueID = @"detailView";
+     
+     if ([segue.identifier isEqualToString:segueID]) {
+         
+         EditTaskVC *editVC = [segue destinationViewController];
+         editVC.dataModel = dataModel;
+     }
+ }
 
 - (IBAction)newTask:(id)sender {
     
@@ -106,33 +153,5 @@
 
 - (IBAction)options:(id)sender {
 }
-
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
-
-     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-     PFObject *object = [self.objects objectAtIndex:indexPath.row];
-     NSString *objectID = [object objectId];
-     NSLog(@"Selected Object ID: %@", objectID);
-     
-     TaskModel *dataModel = [[TaskModel alloc]init];
-     dataModel.TM_name = [object objectForKey:@"name"];
-     dataModel.TM_description = [object objectForKey:@"description"];
-     dataModel.TM_dueDate = [object objectForKey:@"dueDate"];
-     
-     NSLog(@"%@",dataModel.TM_dueDate);
-     dataModel.TM_taskID = objectID;
-     
-     static NSString *segueID = @"detailView";
-     
-     if ([segue.identifier isEqualToString:segueID]) {
-         
-         EditTaskVC *editVC = [segue destinationViewController];
-         editVC.dataModel = dataModel;
-     }
- }
 
 @end

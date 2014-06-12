@@ -10,5 +10,4 @@
 #import "TaskModel.h"
 
 @interface CreateTaskVC : UIViewController
-//@property (nonatomic,strong) TaskModel *dataModel;
 @end
