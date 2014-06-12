@@ -10,10 +10,10 @@
 #import "CreateTaskVC.h"
 #import "EditTaskVC.h"
 
-@interface TaskMainVC () {
-    // Count Number of Objects Loaded
-    // **Testing ONLY**
-    int objectCounter;
+@interface TaskMainVC ()<UIAlertViewDelegate> {
+    
+    // NSIndexPath used for Row Deletion
+    NSIndexPath *selectedPath;
 }
 - (IBAction)newTask:(id)sender;
 - (IBAction)options:(id)sender;
@@ -28,9 +28,6 @@
     
     // Set Title
     self.title = @"Task Manager";
-    
-    // Init Counter
-    objectCounter = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -94,7 +91,7 @@
     // [thumbnailImageView loadInBackground];
     
     cell.textLabel.text = [object objectForKey:@"name"];
-    cell.imageView.image = [UIImage imageNamed:@"calendar.png"];
+    cell.imageView.image = [UIImage imageNamed:@"news.png"];
     
     return cell;
 }
@@ -102,22 +99,20 @@
 - (void)objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
-    
-    objectCounter++;
-    
+
     if (error) {
         NSLog(@"error: %@", [error localizedDescription]);
     } else {
-        NSLog(@"It's all good! %i Objects Loaded", objectCounter);
+        NSLog(@"It's all good! Your Objects are loaded!");
     }
 }
 
 - (PFObject *)getObject {
     
     // Get Selected Row
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    selectedPath = [self.tableView indexPathForSelectedRow];
     // Create Object from Objects Array
-    PFObject *object = [self.objects objectAtIndex:indexPath.row];
+    PFObject *object = [self.objects objectAtIndex:selectedPath.row];
     
     // Return Selected Object
     return object;
@@ -133,7 +128,7 @@
      dataModel.TM_name = [[self getObject] objectForKey:@"name"];
      dataModel.TM_description = [[self getObject] objectForKey:@"description"];
      dataModel.TM_dueDate = [[self getObject] objectForKey:@"dueDate"];
-     dataModel.TM_taskID = [self getObject].objectId;
+     //dataModel.TM_taskID = [self getObject].objectId;
      
      static NSString *segueID = @"detailView";
      
@@ -156,26 +151,40 @@
 
 #pragma mark - TableView Edit/Delete
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                         withRowAnimation:UITableViewRowAnimationFade];
+        //selectedPath = indexPath;
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Delete Task" message:@"Are you sure you want to delete this Task?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         
+        [alert show];
         
     }
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    return UITableViewCellEditingStyleNone;
-}
+#pragma mark - Alert View Delegate Methods
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"User Canceled");
+            break;
+        case 1: {
+            // Log out Object ID
+            NSLog(@"Object %@ was Deleted.", [self getObject].objectId);
+            
+            // Delete Object
+            PFObject *object = [self.objects objectAtIndex:selectedPath.row];
+            [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                [self loadObjects];
+            }];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
-
 @end

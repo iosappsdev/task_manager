@@ -49,7 +49,13 @@
 // IBActions
 - (IBAction)saveTask:(id)sender {
     
-    [TaskModel saveTaskWithName:tf_taskName.text withDescription:tf_description.text withDueDate:localDueDate];
+    if (tf_taskName.text == 0 || tf_description.text == 0 || localDueDate == nil) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Task Manager" message:@"Please set a Task Name, Description and Due Date" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        [alert show];
+    } else {
+        [TaskModel saveTaskWithName:tf_taskName.text withDescription:tf_description.text withDueDate:localDueDate];
+    }
 }
 
 - (IBAction)selectDueDate:(id)sender {
