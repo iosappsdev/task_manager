@@ -26,14 +26,17 @@
     tv_description.text = dataModel.TM_description;
     
     // Clear Back Button Title
-    // self.navigationController.navigationItem.leftBarButtonItem.title = @"";
-    [self.navigationController.navigationItem.leftBarButtonItem
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Return" style:UIBarButtonItemStylePlain target:self action:nil];
     
-    
-    // Edit Button
+    // Edit Button (Right)
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(gotoEdit)];
     
     self.navigationItem.rightBarButtonItem = editButton;
+    self.navigationItem.backBarButtonItem = backButton;
+}
+
+- (void)goBackInStack {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)gotoEdit {
@@ -53,6 +56,20 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"Case 0");
+            break;
+        case 1:
+            NSLog(@"Case 1");
+            break;
+        case 2:
+            NSLog(@"Case 2");
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)actionSheetCancel:(UIActionSheet *)actionSheet {

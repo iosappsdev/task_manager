@@ -13,7 +13,9 @@
 }
 @property (strong, nonatomic) IBOutlet UITextField *tf_taskName;
 @property (strong, nonatomic) IBOutlet UITextField *tf_description;
+@property (weak, nonatomic) IBOutlet UILabel *lb_dueDate;
 - (IBAction)saveTask:(id)sender;
+- (IBAction)selectDueDate:(id)sender;
 @end
 
 @implementation CreateTaskVC
@@ -34,6 +36,8 @@
 // Delegate Methods
 - (void)dateSelectionViewController:(RMDateSelectionViewController *)vc didSelectDate:(NSDate *)aDate {
     localDueDate = aDate;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
 }
 
 - (void)dateSelectionViewControllerDidCancel:(RMDateSelectionViewController *)vc {
@@ -43,5 +47,11 @@
 // IBActions
 - (IBAction)saveTask:(id)sender {
     [TaskModel saveTaskWithName:tf_taskName.text withDescription:tf_description.text withDueDate:localDueDate];
+}
+
+- (IBAction)selectDueDate:(id)sender {
+    
+    RMDateSelectionViewController *datePicker = [[RMDateSelectionViewController alloc]init];
+    [datePicker show];
 }
 @end
